@@ -1,0 +1,12 @@
+{
+  "short_name": "sex-viz",
+  "name": "Sex Data Visualizations",
+  "icons": [
+    {
+      "src": "./viridity_icon.png",
+      "type": "image/png",
+      "sizes": "95x94"
+    }
+  ],
+  "start_url": "."
+}

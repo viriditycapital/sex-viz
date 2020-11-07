@@ -1,0 +1,22 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 11,
+    "sourceType": "module"
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "jquery": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
+  "rules": {
+    "indent": ["error", 2],
+    "semi": "error",
+    "comma-dangle": "error",
+    "quotes": ["error", "single"],
+    "comma-spacing": "error"
+  }
+}
