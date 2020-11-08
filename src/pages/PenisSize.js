@@ -10,6 +10,30 @@ import React from 'react';
 import * as DATA from '../data/DATA';
 import * as d3 from 'd3';
 
+// Colors for the penis size preference map legend
+const LEGEND_COLORS = [
+  {
+    color: '#f9fdf7',
+    label: 'Bad'
+  },
+  {
+    color: '#d1edcc',
+    label: 'Passing'
+  },
+  {
+    color: '#8fcf93',
+    label: 'Satisfied'
+  },
+  {
+    color: '#4ea26a',
+    label: 'Almost ideal'
+  },
+  {
+    color: '#336949',
+    label: 'Ideal'
+  }
+];
+
 class PenisSize extends React.Component {
   componentDidMount () {
     let PENIS_DATA = [];
@@ -33,15 +57,20 @@ class PenisSize extends React.Component {
 
     let margin = {top: 80, right: 25, bottom: 60, left: 60},
       width = 700 - margin.left - margin.right,
-      height = 450 - margin.top - margin.bottom;
+      height = 450 - margin.bottom;
+    /*
+      .attr('width', width + margin.left + margin.right)
+      .attr('height', height + margin.top + margin.bottom)
+    */
+    let width_real = width + margin.left + margin.right;
+    let height_real = height + margin.bottom;
 
     let svg = d3.select('#penis-preference-map')
       .append('svg')
-      .attr('width', width + margin.left + margin.right)
-      .attr('height', height + margin.top + margin.bottom)
+      .attr('viewBox', `0 0 ${width_real} ${height_real}`)
       .append('g')
       .attr('transform',
-        'translate(' + margin.left + ',' + margin.top + ')');
+        'translate(' + margin.left + ',' + 0 + ')');
 
     // Build X scales and axis:
     var x = d3.scaleBand()
@@ -116,13 +145,66 @@ class PenisSize extends React.Component {
       .on('mouseleave', mouseleave);
   }
 
-
   render () {
     return (
       <div id='page-penis-size'>
+        <div className='page-title-text'>
+          Your dick is probably not small
+        </div>
+        <div id='penis-intro'>
+          <p>
+            The cliche is that mainstream media and porn have grossly
+            exaggerated penis expectations, and while this is true, men will
+            still be very insecure about their penis size, because there is a
+            desire to have the security and bragging rights about having a big
+            dick.
+          </p>
+          <p>
+            This data visualization set should help give you a more grounded
+            perspective on how you should look at your penis size. Perhaps
+            you are on the smaller end, and you will continue to feel bad,
+            but at least you have some security in knowing where you stand,
+            instead of just constantly thinking pornstar dicks are the only
+            ideal. We also include a section where you can look at ways to
+            improve your sex life using whatever penis you were endowed with.
+          </p>
+        </div>
         <div id='penis-preference'>
-          {'Women\'s Preferences for Penis Size'}
+          <div className='section-title-text'>
+            {'Women\'s Preferences for Penis Size'}
+          </div>
           <div id='penis-preference-map' />
+          <div id='penis-preference-analysis'>
+            <div id='penis-preference-legend'>
+              {
+                LEGEND_COLORS.map(e => {
+                  return (<div className='legend-entry' key={e.label}>
+                    <div className='legend-color' style={{backgroundColor: e.color}}>
+                    </div>
+                    <div className='legend-label'>
+                      {e.label}
+                    </div>
+                  </div>);})
+              }
+            </div>
+            <div id='penis-preference-explanation'>
+              <p>
+                {'While the saying "4 inches is good enough" is true according\
+                to this chart, it\'s hard not to look at the ideal and realize\
+                it sits between 6-7 inches. The average penis length is 5.1\
+                inches, so while many women might be okay with their partner\'s\
+                size, they might be missing out on maximum sexual satisfaction.'}
+              </p>
+              <p>
+                {'Another interesting point is that men often think that\
+                "bigger is better," which is true for most men according to\
+                this map, but also is a bit of a misconception, since having\
+                too big of a penis can actually cause discomfort. Also,\
+                depending on the girl, different sizes can be more compatible\
+                or preferred.'}
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     );

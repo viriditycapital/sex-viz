@@ -1,8 +1,22 @@
 body {
   font-family: sans-serif;
+  margin: 0;
+  height: 100vh;
 }
 
-#penis-preference-map {
-  width: 50vw;
-  height: 50vh;
+#main-container {
+  display: flex;
+  justify-content: center;
+}
+
+.section-title-text {
+  font-size: 24px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.page-title-text {
+  font-size: 36px;
+  font-weight: bold;
+  margin-top: 12px;
 }

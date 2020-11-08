@@ -1,0 +1,54 @@
+/**
+ * Page about penis sizes
+ */
+
+#page-penis-size {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100vw;
+  max-width: 680px;
+
+  #penis-preference {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+
+    #penis-preference-map {
+      width: 100%;
+    }
+  }
+
+  #penis-preference-analysis {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+
+    #penis-preference-legend {
+      margin-top: 20px;
+      margin-left: 24px;
+      width: 20%;
+    }
+
+    #penis-preference-explanation {
+      width: 70%;
+    }
+
+    .legend-entry {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .legend-color {
+      width: 12px;
+      height: 12px;
+      border-radius: 2px;
+      margin-right: 6px;
+      border: 1px solid black;
+    }
+  }
+}

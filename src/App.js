@@ -12,7 +12,7 @@ import PenisSize from './pages/PenisSize';
 class App extends React.Component {
   render () {
     return (
-      <div>
+      <div id='main-container'>
         <PenisSize />
       </div>
     );
