@@ -220,9 +220,16 @@ class PenisSize extends React.Component {
               {'Most condoms are pretty large, around 7-8 inches, and while you\
             don\'t have to unroll the entire condom, you can get a better fit\
             by purchasing condoms that are your size. '}
-              <a href='https://www.myonecondoms.com/'>
+              <a href='https://www.myonecondoms.com/' target='_blank' rel='noopener noreferrer'>
                 ONE Condoms
               </a> has a fantastic custom condom ordering.
+            </li>
+            <li>
+              <b>Work out. </b>
+              {'You can lose your body fat, which will literally make your\
+              exposed penis bigger. In addition, being able to go for a long\
+              time is a plus, and if your endurance sucks, you won\'t be able\
+              to go for as long as you want'}
             </li>
             <li>
               <b>Get good at other aspects of sex. </b>
