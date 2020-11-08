@@ -171,7 +171,7 @@ class PenisSize extends React.Component {
         </div>
         <div id='penis-preference'>
           <div className='section-title-text'>
-            {'Women\'s Preferences for Penis Size'}
+            {'Preferences for Penis Size'}
           </div>
           <div id='penis-preference-map' />
           <div id='penis-preference-analysis'>

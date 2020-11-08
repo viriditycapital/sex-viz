@@ -6,6 +6,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-right: 12px;
+  margin-left: 12px;
 
   width: 100vw;
   max-width: 680px;
@@ -24,17 +26,34 @@
 
   #penis-preference-analysis {
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
+
+    @media (min-width: 680px) {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+
+    @media (max-width: 680px) {
+      flex-direction: column;
+      align-items: center;
+    }
 
     #penis-preference-legend {
       margin-top: 20px;
       margin-left: 24px;
-      width: 20%;
+
+      @media (min-width: 680px) {
+        width: 20%;
+      }
     }
 
     #penis-preference-explanation {
-      width: 70%;
+      @media (min-width: 680px) {
+        width: 70%;
+      }
+
+      @media (max-width: 680px) {
+        width: 100%;
+      }
     }
 
     .legend-entry {
