@@ -1,4 +1,5 @@
 import React from 'react';
+import PenisSize from './pages/PenisSize';
 
 /**
  * Plan:
@@ -12,6 +13,7 @@ class App extends React.Component {
   render () {
     return (
       <div>
+        <PenisSize />
       </div>
     );
   }

@@ -52,6 +52,12 @@ module.exports = {
         use: [
           'file-loader'
         ]
+      },
+      {
+        test: /\.(csv)$/,
+        use: [
+          'url-loader'
+        ]
       }
     ]
   }
