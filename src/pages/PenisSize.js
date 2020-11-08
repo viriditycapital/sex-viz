@@ -169,7 +169,7 @@ class PenisSize extends React.Component {
             improve your sex life using whatever penis you were endowed with.
           </p>
         </div>
-        <div id='penis-preference'>
+        <div id='penis-preference' className='page-section'>
           <div className='section-title-text'>
             {'Preferences for Penis Size'}
           </div>
@@ -205,6 +205,35 @@ class PenisSize extends React.Component {
               </p>
             </div>
           </div>
+        </div>
+        <div id='penis-tips' className='page-section'>
+          <div className='section-title-text'>
+            {'How to Improve Your Sex Life'}
+          </div>
+          <p>
+            {'So you\'re upset that you don\'t have the penis of a Greek God,\
+            but hey, you can still accommodate. Below are some tips on\
+            getting the most out of your dick, no matter the size.'}
+          </p>
+          <ul>
+            <li><b>Buy condoms that fit. </b>
+              {'Most condoms are pretty large, around 7-8 inches, and while you\
+            don\'t have to unroll the entire condom, you can get a better fit\
+            by purchasing condoms that are your size. '}
+              <a href='https://www.myonecondoms.com/'>
+                ONE Condoms
+              </a> has a fantastic custom condom ordering.
+            </li>
+            <li>
+              <b>Get good at other aspects of sex. </b>
+              {'Probably cliche, but dicking someone down isn\'t the only\
+              component of sex. It\'s the most portrayed in porn, because it\
+              attracts more attention and has more going on, but there are\
+              tons of other ways to please your partner, from kissing,\
+              foreplay, fingering, oral, etc. Master those, and you can\
+              diversify your sexual experiences.'}
+            </li>
+          </ul>
         </div>
       </div>
     );
